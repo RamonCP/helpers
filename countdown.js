@@ -1,5 +1,5 @@
 function countdown(){
-    const date = new Date("Mar 01, 2021 00:00:00")
+    const date = new Date("Jan 21, 2021 12:00:00")
     const difference = +date - +new Date()  // === date - today
     let timeLeft = {}
 
