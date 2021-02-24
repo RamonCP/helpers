@@ -1,15 +1,14 @@
 // Request OAuth 2 example
 
 function requestOAuth2() {
+    const clientId = 'YOUR_CLIENT_ID'
+    const clientSecret = 'YOUR_CLIENT_SECRET'
+
     const options = {
         method: 'POST',
         url: 'https://YOUR_URL/oauth/token',
         headers: {'content-type': 'application/x-www-form-urlencoded'},
-        body: {
-            grant_type: 'client_credentials',
-            client_id: 'YOUR_CLIENT_ID',
-            client_secret: 'YOUR_CLIENT_SECRET',
-        }
+        body: 'grant_type=client_credentials&client_id=' + clientId + '&client_secret=' + clientSecret, 
     }
     
     return fetch(options)
